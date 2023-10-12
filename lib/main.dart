@@ -1,6 +1,7 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_hackaton/pages/geolocationPage.dart';
 import 'package:test_hackaton/pages/mapPage.dart';
 
 
@@ -61,10 +62,6 @@ class HomePage extends StatelessWidget {
                           icon: Icon(Icons.schedule), label: "Расписание пар"),
                       BottomNavigationBarItem(
                           icon: Icon(Icons.notes), label: "Заметки"),
-                      const BottomNavigationBarItem(
-                          icon: Icon(Icons.notes), label: "Заметки"),
-                      const BottomNavigationBarItem(
-                          icon: Icon(Icons.settings), label: "Настройки"),
                     ],
                   )));
         });
@@ -72,7 +69,8 @@ class HomePage extends StatelessWidget {
   
 }
 List<Widget> pages = [
-  MapPage(),
+  GeolocationPage(),
+  // MapPage(),
   Scaffold(body: Center(child: Text(""),),)
 ];
 List<String> pagesString = [
