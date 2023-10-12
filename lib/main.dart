@@ -1,11 +1,17 @@
 // import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_hackaton/pages/cameraPage.dart';
 import 'package:test_hackaton/pages/geolocationPage.dart';
 import 'package:test_hackaton/pages/mapPage.dart';
+import 'package:test_hackaton/util/camera/locator.dart';
 
 
-void main() {
+void main() async{
+  
+    WidgetsFlutterBinding.ensureInitialized();
+   setupLocator();
   runApp(const MyApp());
 }
 
@@ -70,15 +76,15 @@ class HomePage extends StatelessWidget {
 }
 List<Widget> pages = [
   GeolocationPage(),
-  // MapPage(),
+  CameraPage(),
+  MapPage(),
   Scaffold(body: Center(child: Text(""),),)
 ];
 List<String> pagesString = [
-  "Календарь",
-  "Расписание пар",
-  "Moodle",
-  "Заметки",
-  "Настройки",
+  "Главная",
+  "Камера",
+  "Карта",
+  "Профиль",
 ];
 
 class MyHomePageController extends GetxController {
