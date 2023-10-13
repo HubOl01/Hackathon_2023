@@ -49,8 +49,6 @@ class HomePage extends StatelessWidget {
               ),
               bottomNavigationBar: Obx(() => BottomNavigationBar(
                     onTap: controller.changeTabIndex,
-                    // unselectedItemColor: context.theme.bottomNavigationBarTheme.unselectedItemColor,
-                    // selectedItemColor: Colors.redAccent,
                     currentIndex: controller.tabIndex.value,
                     iconSize: 30,
                     showSelectedLabels: true,
@@ -62,12 +60,14 @@ class HomePage extends StatelessWidget {
                         BottomNavigationBarLandscapeLayout.centered,
                     type: BottomNavigationBarType.fixed,
                     items: [
-                      const BottomNavigationBarItem(
-                          icon: Icon(Icons.calendar_month), label: "Календарь"),
-                      const BottomNavigationBarItem(
-                          icon: Icon(Icons.schedule), label: "Расписание пар"),
                       BottomNavigationBarItem(
-                          icon: Icon(Icons.notes), label: "Заметки"),
+                          icon: Icon(Icons.home), label: pagesString[0]),
+                      BottomNavigationBarItem(
+                          icon: Icon(Icons.camera_alt), label: pagesString[1]),
+                      BottomNavigationBarItem(
+                          icon: Icon(Icons.map_outlined), label: pagesString[2]),
+                      BottomNavigationBarItem(
+                          icon: Icon(Icons.person), label: pagesString[3]),
                     ],
                   )));
         });
